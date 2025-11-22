@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Về Chúng Tôi - Coffee Go!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="../index.html" class="logo">Coffee Go!</a>
+            
+            <nav class="main-nav">
+                <li class="nav-item dropdown">
+                    <a href="menu.html" class="nav-link">Menu <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="menu.html?filter=cafe">Cà Phê</a></li>
+                        <li><a href="menu.html?filter=tea">Trà & Đồ uống khác</a></li>
+                        <li><a href="menu.html">Tất cả sản phẩm</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="about.html" class="nav-link">Về chúng tôi</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Liên hệ</a></li>
+            </nav>
+            
+            <div class="header-right-side">
+                <a href="cart.html" id="cart-link" class="cart-button">
+                    🛒 Giỏ hàng
+                    <span id="cart-badge" class="cart-badge">0</span>
+                </a>
+                
+                <div id="user-info" class="user-info">
+                    <a href="login.html" class="login-link" style="color: white; text-decoration: none; font-weight: 600;">Đăng nhập</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero-section">
+        <div class="container">
+            <h1>Về Chúng Tôi</h1>
+            <p>Câu chuyện đằng sau mỗi ly cà phê</p>
+        </div>
+    </section>
+
+    <section class="about-story-section fade-in-section">
+        <div class="container about-grid">
+            <div class="about-story-image">
+                <img src="images/best-1.jpg" alt="Pha chế cà phê">
+            </div>
+            <div class="about-story-content">
+                <h3>Câu Chuyện Của Coffee Go!</h3>
+                <p>Coffee Go! được sinh ra từ niềm đam mê bất tận với hạt cà phê Việt Nam. Chúng tôi bắt đầu từ một quầy xe đẩy nhỏ, với ước mơ mang đến những ly cà phê "nhanh" nhưng vẫn giữ trọn vẹn hương vị nguyên bản và chất lượng cao nhất.</p>
+                <p>Chúng tôi tin rằng trong nhịp sống hối hả, bạn xứng đáng có một điểm dừng nhanh chóng để nạp năng lượng mà không phải hy sinh chất lượng. Đó là lý do chúng tôi tập trung vào trải nghiệm "mang về", tối ưu hóa quy trình đặt hàng để bạn có được ly cà phê yêu thích chỉ trong vài phút.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-section fade-in-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 38px; margin-bottom: 50px;">Giá Trị Của Chúng Tôi</h2>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <h4>☕ Chất Lượng Hạt</h4>
+                    <p>Chúng tôi tự tay tuyển chọn 100% hạt Arabica và Robusta từ các nông trại uy tín nhất, rang mới mỗi ngày.</p>
+                </div>
+                <div class="mission-card">
+                    <h4>🚀 Tốc Độ Vượt Trội</h4>
+                    <p>Hệ thống đặt hàng online và quy trình pha chế tối ưu giúp bạn nhận cà phê ngay lập tức, không cần chờ đợi.</p>
+                </div>
+                <div class="mission-card">
+                    <h4>🌿 Bền Vững</h4>
+                    <p>Chúng tôi cam kết sử dụng ly và bao bì thân thiện với môi trường, giảm thiểu rác thải nhựa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="cart-container"></div>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <a href="index.html" class="logo footer-logo">Coffee Go!</a>
+                <p class="footer-about">
+                    Mang đến cho bạn ly cà phê ngon nhất, nhanh nhất. Đặt hàng online, ghé lấy tại quầy.
+                </p>
+            </div>
+            <div class="footer-column">
+                <h4>Liên kết nhanh</h4>
+                <ul class="footer-links">
+                    <li><a href="menu.html?category=new">Menu Mới</a></li>
+                    <li><a href="menu.html?category=bestseller">Bán Chạy</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Giờ mở cửa</h4>
+                <p>Thứ 2 - Thứ 6: 6:00 - 20:00</p>
+                <p>Thứ 7 & CN: 7:00 - 18:00</p>
+                <p style="margin-top: 15px; opacity: 0.8;">
+                    123 Đường ABC, Quận 1, TP. HCM
+                </p>
+            </div>
+            <div class="footer-column">
+                <h4>Theo dõi chúng tôi</h4>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="TikTok">TT</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <p>&copy; 2023 Coffee Go! All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../model/app.js"></script> 
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu đầy đủ - Coffee Go!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../model/data.js"></script>
+</head>
+<body>
+
+<header class="main-header">
+    <div class="container header-content">
+        <a href="../index.html" class="logo">Coffee Go!</a>
+        
+        <nav class="main-nav">
+            <li class="nav-item dropdown">
+                <a href="menu.html" class="nav-link">Menu <span class="dropdown-arrow">▼</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="menu.html?filter=cafe">Cà Phê</a></li>
+                    <li><a href="menu.html?filter=tea">Trà & Đồ uống khác</a></li>
+                    <li><a href="menu.html">Tất cả sản phẩm</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="about.html" class="nav-link">Về chúng tôi</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Liên hệ</a></li>
+        </nav>
+        
+        <div class="header-right-side">
+            <a href="cart.html" id="cart-link" class="cart-button">
+                🛒 Giỏ hàng
+                <span id="cart-badge" class="cart-badge">0</span>
+            </a>
+            
+            <div id="user-info" class="user-info">
+                <a href="login.html" class="login-link" style="color: white; text-decoration: none; font-weight: 600;">Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <section class="product-listing-section fade-in-section">
+        <div class="container">
+            <h2 id="menu-title" style="font-size: 42px; text-align: center;">Đang tải Menu...</h2>
+            
+            <div class="products-grid" id="full-menu-grid" style="justify-content: center; margin-top: 40px;">
+                </div>
+        </div>
+    </section>
+
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2023 Coffee Go! All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../model/menu.js"></script>
+</body>
+</html>

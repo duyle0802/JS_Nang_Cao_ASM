@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký - Coffee Go!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body class="auth-page-body">
+
+    <div class="auth-box">
+        <a href="index.html" class="auth-logo">Coffee Go!</a>
+        <p class="auth-title">Tạo tài khoản thành viên mới</p>
+
+        <form id="register-form" class="auth-form">
+            <div class="form-group">
+                <label for="fullname">Họ và tên</label>
+                <input type="text" id="fullname" required placeholder="Nguyễn Văn A">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required placeholder="vidu@gmail.com">
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" required placeholder="Ít nhất 6 ký tự">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Nhập lại mật khẩu</label>
+                <input type="password" id="confirm-password" required placeholder="********">
+                <p id="register-error" class="error-message"></p>
+            </div>
+            <button type="submit" class="btn-auth">Đăng Ký</button>
+        </form>
+
+        <div class="auth-footer">
+            <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+        </div>
+    </div>
+
+    <script src="../model/register.js"></script>
+</body>
+</html>

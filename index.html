@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cà Phê Mang Về - Tên Quán Của Bạn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="model/data.js"></script>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">Coffee Go!</a>
+            
+            <nav class="main-nav">
+                <li class="nav-item dropdown">
+                    <a href="view/menu.html" class="nav-link">Menu <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="view/menu.html?filter=cafe">Cà Phê</a></li>
+                        <li><a href="view/menu.html?filter=tea">Trà & Đồ uống khác</a></li>
+                        <li><a href="view/menu.html">Tất cả sản phẩm</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="view/about.html" class="nav-link">Về chúng tôi</a></li>
+                <li class="nav-item"><a href="view/contact.html" class="nav-link">Liên hệ</a></li>
+            </nav>
+            
+            <div class="header-right-side">
+                <a href="view/cart.html" id="cart-link" class="cart-button">
+                    🛒 Giỏ hàng
+                    <span id="cart-badge" class="cart-badge">0</span>
+                </a>
+                
+                <div id="user-info" class="user-info">
+                    <a href="view/login.html" class="login-link" style="color: white; text-decoration: none; font-weight: 600;">Đăng nhập</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section fade-in-section">
+        <div class="hero-background"></div> <div class="container hero-content">
+            <h1>Cà Phê Của Bạn, Sẵn Sàng Trong 5 Phút.</h1>
+            <p>Trải nghiệm hương vị tinh túy, đặt hàng dễ dàng, lấy ngay tức thì.</p>
+            <button class="btn btn-primary">Đặt Hàng Ngay</button>
+        </div>
+    </section>
+
+    <section class="how-it-works-section fade-in-section">
+        <div class="container">
+            <h2>Hoạt động như thế nào?</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <span class="step-icon">☕</span>
+                    <h3>1. Chọn món</h3>
+                    <p>Duyệt qua menu phong phú của chúng tôi và chọn đồ uống yêu thích.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-icon">💳</span>
+                    <h3>2. Thanh toán</h3>
+                    <p>Hoàn tất đơn hàng nhanh chóng với các phương thức thanh toán an toàn.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-icon">🚀</span>
+                    <h3>3. Ghé lấy hàng</h3>
+                    <p>Đồ uống của bạn sẽ sẵn sàng chờ bạn tại quầy chỉ sau vài phút.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-listing-section fade-in-section">
+    <div class="container">
+
+        <div class="product-category">
+            <h3>Sản phẩm mới ☕</h3>
+            <div class="products-grid" id="new-products-grid">
+                </div>
+            <a href="view/menu.html?category=new" class="see-more-btn">Xem thêm</a>
+        </div>
+
+        <div class="product-category">
+            <h3>Sản phẩm bán chạy 🔥</h3>
+            <div class="products-grid" id="bestseller-products-grid">
+                </div>
+            <a href="view/menu.html?category=bestseller" class="see-more-btn">Xem thêm</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="news-section fade-in-section">
+    <div class="container">
+        <h2 style="text-align: center; font-size: 38px; margin-bottom: 50px;">Tin Tức & Khuyến Mãi</h2>
+        
+        <div class="news-grid">
+            
+            <div class="news-column-secondary">
+                
+                <article class="news-card-small">
+                    <a href="#" class="news-card-small-image">
+                        <img src="https:/chocho/imgs.search.brave.com/03c-QWq0pdQPKFSFukkrkJN6MjVq2ug4WS6wtKxHHoc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aHVvbmduZ2hpZXBh/YXUuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDI0LzA0L2hv/Yy1waGEtY2hlLWNh/ZmUtbWF5LTI0N3gx/NjUuanBn" alt="Pha chế cafe">
+                    </a>
+                    <div class="news-card-content">
+                        <span class="news-card-category">Khuyến mãi</span>
+                        <h4 class="news-card-title"><a href="#">Giảm 30% cho đơn hàng tiếp theo của bạn</a></h4>
+                    </div>
+                </article>
+
+                <article class="news-card-small">
+                    <a href="#" class="news-card-small-image">
+                        <img src="https://imgs.search.brave.com/7OM4g7tg8yez7c2mknqtvCcL7WznxCW8yJ5IdBwki84/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/dGdkZC52bi9GaWxl/cy8yMDE4LzA1LzA4/LzEwODcxMjEvY2Fj/LWxvYWktaGF0LWNh/ZmUtbm9pLXRpZW5n/LTRfODAweDQ1MC5q/cGc" alt="Hạt cafe">
+                    </a>
+                    <div class="news-card-content">
+                        <span class="news-card-category">Câu chuyện</span>
+                        <h4 class="news-card-title"><a href="#">Hành trình tìm hạt Arabica thượng hạng</a></h4>
+                    </div>
+                </article>
+
+                <article class="news-card-small">
+                    <a href="#" class="news-card-small-image">
+                        <img src="https://imgs.search.brave.com/3R0YB4OdX7HRKX1vkQsN36sLMIyYrc9jnhxSAart3vg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjUv/ODc1LzU2OC9zbWFs/bC9jb2xkLWJyZXct/Y29mZmVlLWJvdHRs/ZS1vbi10YWJsZS1w/aG90by5qcGc" alt="Cold brew">
+                    </a>
+                    <div class="news-card-content">
+                        <span class="news-card-category">Pha chế</span>
+                        <h4 class="news-card-title"><a href="#">Cách tự ủ Cold Brew tại nhà đơn giản</a></h4>
+                    </div>
+                </article>
+
+                <article class="news-card-small">
+                    <a href="#" class="news-card-small-image">
+                        <img src="https://imgs.search.brave.com/gwam7w5anJAw9A4MBZiEVgziA-rvAZkSYJmoew6p6Ak/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA2/MTAvNzMyOS8zNTYz/L2ZpbGVzL25hbS1j/b2ZmZWUtaWNlZC1j/b2ZmZWUtMl80ODB4/NDgwLmpwZz92PTE2/NTE3NzE1MjA" alt="Cafe sữa">
+                    </a>
+                    <div class="news-card-content">
+                        <span class="news-card-category">Khuyến mãi</span>
+                        <h4 class="news-card-title"><a href="#">Mua 2 tặng 1: Áp dụng thứ 3 hàng tuần</a></h4>
+                    </div>
+                </article>
+
+            </div>
+            
+            <div class="news-column-main">
+                
+                <article class="news-card-large">
+                    <a href="#" class="news-card-large-image">
+                        <img src="https://imgs.search.brave.com/3so8B4YKeJEMTO79nUaHZgcSIG8GgCUZfz96Pcucwn0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9iaXp3/ZWIuZGt0Y2RuLm5l/dC8xMDAvMjkxLzI3/Mi9wcm9kdWN0cy96/NjAwMjA3MzA4MTgw/My0xYzFiNWJmNDBk/YmQ3MmE0ZjJkYjhl/NGM0ZWI1ZDIxOS5q/cGc_dj0xNzMwODAy/MTgzOTcz" alt="Ly Espresso">
+                    </a>
+                    <div class="news-card-content">
+                        <span class="news-card-category">Xem nhiều nhất</span>
+                        <h3 class="news-card-title"><a href="#">Bí mật đằng sau một ly Espresso hoàn hảo</a></h3>
+                        <p class="news-card-excerpt">Không chỉ là cà phê, đó là cả một nghệ thuật. Cùng tìm hiểu về nhiệt độ, áp suất và thời gian chiết xuất...</p>
+                        <a href="#" class="news-card-readmore">Đọc thêm &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="news-card-large">
+                    <a href="#" class="news-card-large-image">
+                        <img src="https://imgs.search.brave.com/ZaF5KOQEw24tzPqqylMuI9UNSULxmz0AWSYKhhjBVQQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMucGV4ZWxzLmNv/bS9waG90b3MvNDE0/NTU1L3BleGVscy1w/aG90by00MTQ1NTUu/anBlZz9hdXRvPWNv/bXByZXNzJmNzPXRp/bnlzcmdiJmRwcj0x/Jnc9NTAw" alt="Ly Cappuccino">
+                    </a>
+                    <div class="news-card-content">
+                        <span class="news-card-category">Xem nhiều nhất</span>
+                        <h3 class="news-card-title"><a href="#">So sánh Cappuccino, Latte và Flat White</a></h3>
+                        <p class="news-card-excerpt">Cả 3 đều có espresso và sữa, vậy điều gì tạo nên sự khác biệt? Hãy cùng chuyên gia của chúng tôi phân tích.</p>
+                        <a href="#" class="news-card-readmore">Đọc thêm &rarr;</a>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+    <footer class="main-footer">
+    <div class="container footer-grid">
+        
+        <div class="footer-column">
+            <a href="index.html" class="logo footer-logo">Coffee Go!</a>
+            <p class="footer-about">
+                Mang đến cho bạn ly cà phê ngon nhất, nhanh nhất. Đặt hàng online, ghé lấy tại quầy.
+            </p>
+        </div>
+        
+        <div class="footer-column">
+            <h4>Liên kết nhanh</h4>
+            <ul class="footer-links">
+                <li><a href="menu.html?category=new">Menu Mới</a></li>
+                <li><a href="menu.html?category=bestseller">Bán Chạy</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Về chúng tôi</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column">
+            <h4>Giờ mở cửa</h4>
+            <p>Thứ 2 - Thứ 6: 6:00 - 20:00</p>
+            <p>Thứ 7 & CN: 7:00 - 18:00</p>
+            <p style="margin-top: 15px; opacity: 0.8;">
+                123 Đường ABC, Quận 1, TP. HCM
+            </p>
+        </div>
+        
+        <div class="footer-column">
+            <h4>Theo dõi chúng tôi</h4>
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook">FB</a>
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="TikTok">TT</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom-bar">
+        <p>&copy; 2023 Coffee Go! All rights reserved.</p>
+    </div>
+</footer>
+
+    <script src="model/app.js"></script>
+</body>
+</html>

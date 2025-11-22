@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ - Coffee Go!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="container header-content">
+        <a href="../index.html" class="logo">Coffee Go!</a>
+        
+        <nav class="main-nav">
+            <li class="nav-item dropdown">
+                <a href="menu.html" class="nav-link">Menu <span class="dropdown-arrow">▼</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="menu.html?filter=cafe">Cà Phê</a></li>
+                    <li><a href="menu.html?filter=tea">Trà & Đồ uống khác</a></li>
+                    <li><a href="menu.html">Tất cả sản phẩm</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="about.html" class="nav-link">Về chúng tôi</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Liên hệ</a></li>
+        </nav>
+        
+        <div class="header-right-side">
+            <a href="cart.html" id="cart-link" class="cart-button">
+                🛒 Giỏ hàng
+                <span id="cart-badge" class="cart-badge">0</span>
+            </a>
+            
+            <div id="user-info" class="user-info">
+                <a href="login.html" class="login-link" style="color: white; text-decoration: none; font-weight: 600;">Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <section class="page-hero-section">
+        <div class="container">
+            <h1>Liên Hệ</h1>
+            <p>Chúng tôi rất mong được lắng nghe từ bạn</p>
+        </div>
+    </section>
+
+    <section class="contact-layout-section fade-in-section">
+        <div class="container contact-grid">
+            
+            <div class="contact-form-wrapper">
+                <h3>Gửi tin nhắn cho chúng tôi</h3>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Họ và tên</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Lời nhắn</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Gửi</button>
+                </form>
+            </div>
+
+            <div class="contact-info-wrapper">
+                <h3>Thông tin liên hệ</h3>
+                <p>Ghé thăm chúng tôi hoặc gọi điện để được hỗ trợ nhanh nhất.</p>
+                <div class="contact-info-item">
+                    <span>📍</span>
+                    <div>
+                        <strong>Địa chỉ:</strong>
+                        <p>123 Đường ABC, Phường B, Quận 1, TP. Hồ Chí Minh</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <span>📞</span>
+                    <div>
+                        <strong>Điện thoại:</strong>
+                        <p>(+84) 901 234 567</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <span>✉️</span>
+                    <div>
+                        <strong>Email:</strong>
+                        <p>hello@coffeego.vn</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <span>🕒</span>
+                    <div>
+                        <strong>Giờ mở cửa:</strong>
+                        <p>Thứ 2 - CN: 6:00 - 20:00</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="map-section">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.447990495287!2d106.701755!3d10.776987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4a249d9a79%3A0x65c5d0e2e5b8895!2sBitexco%20Financial%20Tower!5e0!3m2!1svi!2s!4v1699999999999!5m2!1svi!2s" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <div id="cart-container"></div>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-column">
+                <a href="index.html" class="logo footer-logo">Coffee Go!</a>
+                <p class="footer-about">
+                    Mang đến cho bạn ly cà phê ngon nhất, nhanh nhất. Đặt hàng online, ghé lấy tại quầy.
+                </p>
+            </div>
+            <div class="footer-column">
+                <h4>Liên kết nhanh</h4>
+                <ul class="footer-links">
+                    <li><a href="menu.html?category=new">Menu Mới</a></li>
+                    <li><a href="menu.html?category=bestseller">Bán Chạy</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Giờ mở cửa</h4>
+                <p>Thứ 2 - Thứ 6: 6:00 - 20:00</p>
+                <p>Thứ 7 & CN: 7:00 - 18:00</p>
+                <p style="margin-top: 15px; opacity: 0.8;">
+                    123 Đường ABC, Quận 1, TP. HCM
+                </p>
+            </div>
+            <div class="footer-column">
+                <h4>Theo dõi chúng tôi</h4>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="TikTok">TT</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <p>&copy; 2023 Coffee Go! All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../model/app.js"></script> 
+</body>
+</html>
