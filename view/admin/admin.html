@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin - Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <style>
+        .admin-container { max-width: 1000px; margin: 32px auto; padding: 0 16px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+        table th, table td { padding: 8px 10px; border: 1px solid #ddd; text-align: left; }
+        .form-row { display: flex; gap: 8px; flex-wrap: wrap; }
+        .form-row > * { flex: 1 1 200px; }
+        .btn { padding: 8px 12px; border-radius: 6px; border: none; cursor: pointer; }
+        .btn-primary { background:#c4915f; color:white }
+        .btn-danger { background:#e63946; color:white }
+        .btn-ghost { background:transparent; border:1px solid #ccc }
+        .small { padding:6px 8px; font-size:14px }
+        .top-actions { display:flex; gap:8px; align-items:center; margin-top:12px }
+        .checkbox-inline { display:flex; gap:6px; align-items:center }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Admin - Quản lý sản phẩm</h1>
+        <div style="display:flex; align-items:center; gap:12px; justify-content:space-between; margin-bottom:12px;">
+            <h2 id="admin-greeting" style="margin:0; font-size:20px; font-weight:600;">Xin chào, admin</h2>
+            <div>
+                <button id="logout-btn" class="btn small" style="background:#f2f2f2;">Đăng xuất</button>
+            </div>
+        </div>
+
+        <section id="product-form-section">
+            <h2 id="form-title">Thêm sản phẩm mới</h2>
+            <form id="product-form">
+                <div class="form-row">
+                    <input id="p-name" placeholder="Tên sản phẩm" required />
+                    <input id="p-price" type="number" step="0.01" placeholder="Giá" required />
+                    <input id="p-icon" placeholder="Icon (emoji)" />
+                    <input id="p-image" placeholder="URL ảnh" />
+                </div>
+                <div class="form-row" style="margin-top:8px">
+                    <input id="p-category" placeholder="Category (cafe/tea/...)" />
+                    <input id="p-description" placeholder="Mô tả" />
+                    <div class="checkbox-inline">
+                        <input id="p-isNew" type="checkbox" /> <label for="p-isNew">isNew</label>
+                    </div>
+                    <div class="checkbox-inline">
+                        <input id="p-isBestseller" type="checkbox" /> <label for="p-isBestseller">isBestseller</label>
+                    </div>
+                </div>
+                <div class="top-actions">
+                    <button class="btn btn-primary" id="save-btn">Lưu</button>
+                    <button type="button" class="btn btn-ghost" id="reset-btn">Reset</button>
+                    <div style="margin-left:auto">Tổng sản phẩm: <span id="total-count">0</span></div>
+                </div>
+            </form>
+        </section>
+
+        <section id="list-section">
+            <h2>Danh sách sản phẩm</h2>
+            <input id="search" placeholder="Tìm theo tên hoặc id" style="width:100%; padding:8px; margin-top:8px" />
+            <table id="products-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên</th>
+                        <th>Giá</th>
+                        <th>Icon</th>
+                        <th>Category</th>
+                        <th>Flags</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+
+    <script type="module" src="../../model/admin.js"></script>
+    <script>
+        // Logout handler: clear currentUser and go back to homepage
+        (function(){
+            const btn = document.getElementById('logout-btn');
+            if (!btn) return;
+            btn.addEventListener('click', () => {
+                try { localStorage.removeItem('currentUser'); } catch(e) {}
+                // Redirect to project index (two levels up)
+                window.location.href = '../../index.html';
+            });
+
+            // If there's a stored currentUser, show username
+            try {
+                const cu = JSON.parse(localStorage.getItem('currentUser') || 'null');
+                if (cu && cu.username) {
+                    const greet = document.getElementById('admin-greeting');
+                    if (greet) greet.textContent = `Xin chào, ${cu.username}`;
+                }
+            } catch(e) { /* ignore */ }
+        })();
+    </script>
+</body>
+</html>

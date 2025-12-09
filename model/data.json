@@ -1,0 +1,226 @@
+{
+  "products": [
+    {
+      "id": "n1",
+      "name": "Cold Brew Vani",
+      "price": 4.76,
+      "icon": "🧊",
+      "image": "https://imgs.search.brave.com/RGkEN_TVFG2Y-1ACyevPQvY1bQyFisxu4H6yGRhGKc4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9taWR3/ZXN0bmljZWJsb2cu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIyLzA5L3N0YXJi/dWNrcy1jb3B5Y2F0/LXZhbmlsbGEtc3dl/ZXQtY3JlYW0tY29s/ZC1icmV3LmpwZw",
+      "category": "cafe",
+      "description": "Cold Brew Vani ủ lạnh 24h với hạt Arabica thượng hạng...",
+      "reviews": [],
+      "isNew": true,
+      "isBestseller": false
+    },
+    {
+      "id": "n2",
+      "name": "Latte Hạnh Nhân",
+      "price": 4.25,
+      "icon": "☕",
+      "image": "https://imgs.search.brave.com/iq2rowiLZyiH8tp_Nh-iPF4L58sRSEX8-YhpyjTi5ew/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcm9k/dWN0LmhzdGF0aWMu/bmV0LzEwMDAwNzUw/NzgvcHJvZHVjdC8x/NzQ2NDQxNTEzX2Fs/bW9uZC1jb2ZmZWVf/ZjA3OTc3ODc1MzRh/NDczZWE1MWYyOWFm/YWFkZjM3ZDNfbGFy/Z2UucG5n",
+      "gallery": [
+        "images/new-2.jpg",
+        "images/best-3.jpg",
+        "images/new-4.jpg",
+        "images/best-5.jpg"
+      ],
+      "description": "Espresso đậm đà kết hợp sữa hạnh nhân béo ngậy...",
+      "reviews": [
+        {
+          "author": "Lê C",
+          "rating": 5,
+          "text": "Vị béo ngậy, rất thơm."
+        }
+      ],
+      "category": "cafe",
+      "isNew": true,
+      "isBestseller": false
+    },
+    {
+      "id": "n3",
+      "name": "Trà Ổi Hồng",
+      "price": 3.5,
+      "icon": "🍹",
+      "image": "https://imgs.search.brave.com/0vj3XWo6UWI3CT1OcAwfZr76aNYp1UFLCrOE83Wxre8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9maWxl/LmhzdGF0aWMubmV0/LzEwMDAxMzUzMjMv/ZmlsZS9vaTJfM2Y5/YjY3MGZiYzA2NDc5/ZGFkNjgzYTM1ZmIz/Y2UzYTdfZ3JhbmRl/LmpwZw",
+      "gallery": [
+        "images/new-3.jpg",
+        "images/best-6.jpg"
+      ],
+      "description": "Trà xanh nhài tươi mát kết hợp mứt ổi hồng...",
+      "reviews": [],
+      "category": "tea",
+      "isNew": true,
+      "isBestseller": false
+    },
+    {
+      "id": "n4",
+      "name": "Mocha Dừa",
+      "price": 4.5,
+      "icon": "🥥",
+      "image": "https://imgs.search.brave.com/x5xZyX95vVpWXaJ5Eqbiwc1lGdFHKUTPZ2_-Nx9ruy4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi90b3At/dmlldy1ob3QtbW9j/aGEtY29mZmVlLWxh/dHRlLWFydC1jaG9j/b2xhdGUtaGVhcnQt/c2hhcGUtc3BpcmFs/LWdsYXNzLXRhYmxl/LWJhY2tncm91bmQt/YnJvd24tc3VnYXIt/d29vZC1zcG9vbi0x/MjAzMDczMjUuanBn",
+      "gallery": [
+        "images/new-4.jpg",
+        "images/best-1.jpg"
+      ],
+      "description": "Espresso, sô-cô-la và nước cốt dừa béo ngậy...",
+      "reviews": [
+        {
+          "author": "Phạm D",
+          "rating": 5,
+          "text": "Đỉnh cao!"
+        }
+      ],
+      "category": "cafe",
+      "isNew": true,
+      "isBestseller": false
+    },
+    {
+      "id": "n5",
+      "name": "Americano Đá",
+      "price": 3,
+      "icon": "☕",
+      "image": "https://imgs.search.brave.com/XAAQInKLoBBHLNYP0c8n1Q0czA6lWnk-PP3thmEEfUY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMi8w/NC8wNS8wNy80Ni9p/Y2VkLWNvZmZlZS03/MTEzMDQzXzY0MC5q/cGc",
+      "gallery": [
+        "images/new-5.jpg",
+        "images/best-4.jpg"
+      ],
+      "description": "Espresso nguyên chất pha loãng với nước lọc...",
+      "reviews": [
+        {
+          "author": "Võ E",
+          "rating": 4,
+          "text": "Đậm vị."
+        }
+      ],
+      "category": "cafe",
+      "isNew": true,
+      "isBestseller": false
+    },
+    {
+      "id": "n6",
+      "name": "Trà dâu vải",
+      "price": 2.43,
+      "icon": "🧃",
+      "image": "https://imgs.search.brave.com/XAAQInKLoBBHLNYP0c8n1Q0czA6lWnk-PP3thmEEfUY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMi8w/NC8wNS8wNy80Ni9p/Y2VkLWNvZmZlZS03/MTEzMDQzXzY0MC5q/cGc",
+      "gallery": [
+        "images/new-5.jpg",
+        "images/best-4.jpg"
+      ],
+      "description": "Espresso nguyên chất pha loãng với nước lọc...",
+      "reviews": [
+        {
+          "author": "Võ E",
+          "rating": 4,
+          "text": "Đậm vị."
+        }
+      ],
+      "category": "tea",
+      "isNew": true,
+      "isBestseller": false
+    },
+    {
+      "id": "b1",
+      "name": "Espresso",
+      "price": 2.5,
+      "icon": "☕",
+      "image": "https://imgs.search.brave.com/5P0RGYrl26cHBZIMKeMj7YvIWyJBGug1hTpbCFu7tc8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQ5/MTYzOTQxL3Bob3Rv/L2Nsb3NlLXVwLW9m/LWFuLWVzcHJlc3Nv/LWNvZmZlZW1ha2Vy/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1JS1o4am1oNkNh/MmY2RUpFR2FlSS1u/Xy14MnE4cE9VRk55/ZnphdW91NzEwPQ",
+      "gallery": [
+        "images/best-1.jpg",
+        "images/new-1.jpg"
+      ],
+      "description": "Một shot espresso đậm đặc...",
+      "reviews": [
+        {
+          "author": "Hoàng F",
+          "rating": 5,
+          "text": "Chuẩn vị Ý!"
+        }
+      ],
+      "category": "cafe",
+      "isNew": false,
+      "isBestseller": true
+    },
+    {
+      "id": "b2",
+      "name": "Cappuccino",
+      "price": 3.5,
+      "icon": "☕",
+      "image": "https://imgs.search.brave.com/8nGyVIpIKfdWe-w9OnNWd-_bKr4v4u19KTkOi6xlkHg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9nb3Nw/ZWNpYWx0eWNvZmZl/ZS5jb20vbWVkaWFs/aWJyYXJ5LzIwMjMv/MDEvY2FwcHVjY2lu/by1hcnQtYmZjb2Zm/ZWU3Ny0xMDI0eDUz/OC5qcGc",
+      "gallery": [
+        "images/best-2.jpg",
+        "images/new-2.jpg"
+      ],
+      "description": "Tỷ lệ vàng 1/3 espresso, 1/3 sữa nóng...",
+      "reviews": [],
+      "category": "cafe",
+      "isNew": false,
+      "isBestseller": true
+    },
+    {
+      "id": "b3",
+      "name": "Latte",
+      "price": 3.75,
+      "icon": "☕",
+      "image": "https://imgs.search.brave.com/rz4uKutyuabbJLuaGgppFWIpU60FDI0clFhxdCQgA0I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNDkv/MzMzLzM5OS9zbWFs/bC9zdGVhbWluZy1j/dXAtb2YtY29mZmVl/LXdpdGgtbGF0dGUt/YXJ0LW9uLWZvYW0t/c2l0dGluZy1vbi1w/YXR0ZXJuZWQtY291/bnRlcnRvcC1waG90/by5qcGc",
+      "gallery": [
+        "images/best-3.jpg",
+        "images/new-3.jpg"
+      ],
+      "description": "Nhiều sữa hơn Cappuccino, mềm mại...",
+      "reviews": [
+        {
+          "author": "Lý H",
+          "rating": 4,
+          "text": "Hơi nhiều sữa."
+        }
+      ],
+      "category": "cafe",
+      "isNew": false,
+      "isBestseller": true
+    },
+    {
+      "id": "b4",
+      "name": "Bạc Xỉu",
+      "price": 3.25,
+      "icon": "☕",
+      "image": "https://imgs.search.brave.com/qIFspwxNalpGlrjuCjTnFKR5Hji922wogBMKp_tJkuU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHV5/dGluaGdpYXJlLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/My8wNy9oaW5oLWFu/aC1seS1jYWZlLWJh/Yy14aXVfMTQuanBn",
+      "gallery": [
+        "images/best-4.jpg",
+        "images/new-4.jpg"
+      ],
+      "description": "Hương vị Sài Gòn đặc trưng...",
+      "reviews": [
+        {
+          "author": "Vũ K",
+          "rating": 5,
+          "text": "Rất ngon!"
+        }
+      ],
+      "category": "cafe",
+      "isNew": false,
+      "isBestseller": true
+    },
+    {
+      "id": "b5",
+      "name": "Cà Phê Sữa",
+      "price": 3,
+      "icon": "☕",
+      "image": "https://imgs.search.brave.com/9a4JsIUq9JPupNuegPQgIN3DqS_aStMxRemqRtB1_JI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odW51/ZmEudm4vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjQvMTEvdG9w/LW5odW5nLWhpbmgt/YW5oLWx5LWNhLXBo/ZS1zdWEtZGEtZGVw/LW5oYXQtMzgud2Vi/cA",
+      "gallery": [
+        "images/best-5.jpg",
+        "images/new-5.jpg"
+      ],
+      "description": "Cà phê phin truyền thống...",
+      "reviews": [
+        {
+          "author": "Ngô L",
+          "rating": 5,
+          "text": "Tuyệt vời."
+        }
+      ],
+      "category": "cafe",
+      "isNew": false,
+      "isBestseller": true
+    }
+  ]
+}

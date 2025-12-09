@@ -10,6 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
+        // Quick admin override: username 'admin123' and password '1'
+        if (email.trim() === 'admin123@gmail.com' && password === '1') {
+            const adminUser = { username: 'admin123', role: 'admin' };
+            localStorage.setItem('currentUser', JSON.stringify(adminUser));
+            // redirect to admin page (relative to view/)
+            window.location.href = 'admin/admin.html';
+            return;
+        }
+
         // 1. Lấy danh sách user từ localStorage
         // Nếu chưa có ai đăng ký thì trả về mảng rỗng
         const users = JSON.parse(localStorage.getItem('users')) || [];

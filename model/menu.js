@@ -1,5 +1,7 @@
 /* === FILE: js/menu.js (Dùng cho view/menu.html) === */
 
+import { getProducts } from './api.js';
+
 // === 1. LOGIC GIỎ HÀNG (Giữ nguyên) ===
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -71,7 +73,7 @@ function createProductCardHTML(product) {
 }
 
 // Hàm render TRANG MENU ĐẦY ĐỦ (LOGIC LỌC MỚI)
-function renderFullMenu() {
+async function renderFullMenu() {
     const urlParams = new URLSearchParams(window.location.search);
     const category = urlParams.get('category'); // Lấy ?category=...
     const filter = urlParams.get('filter');     // Lấy ?filter=...
@@ -85,6 +87,7 @@ function renderFullMenu() {
     let pageTitle = "Menu";
 
     // === LOGIC LỌC DỰA TRÊN MẢNG PHẲNG (FLAT ARRAY) ===
+    const allProducts = await getProducts();
 
     // 1. Lọc theo Nhóm (từ Trang chủ bấm sang)
     if (category === 'new') {

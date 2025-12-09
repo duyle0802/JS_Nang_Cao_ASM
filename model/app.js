@@ -1,5 +1,7 @@
 /* === FILE: js/script.js (Dùng cho index, about, contact...) === */
 
+import { getProducts } from './api.js';
+
 // === 1. LOGIC GIỎ HÀNG (Dùng chung cho mọi trang) ===
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -79,14 +81,14 @@ function createProductCardHTML(product) {
 }
 
 // Hàm render SẢN PHẨM TRANG CHỦ (ĐÃ SỬA LỖI)
-function renderHomepageProducts() {
+async function renderHomepageProducts() {
     const newGrid = document.getElementById('new-products-grid');
     const bestsellerGrid = document.getElementById('bestseller-products-grid');
 
     if (!newGrid || !bestsellerGrid) return;
 
-    // === SỬA LỖI Ở ĐÂY: Dùng .filter() thay vì gọi trực tiếp thuộc tính ===
-    
+    const allProducts = await getProducts();
+
     // Lọc sản phẩm mới (isNew: true)
     const newProducts = allProducts.filter(p => p.isNew).slice(0, 5);
     newGrid.innerHTML = newProducts.map(createProductCardHTML).join('');
@@ -109,11 +111,11 @@ document.addEventListener('click', function(event) {
 });
 
 // === 4. KHỞI CHẠY (Logic chung cho mọi trang) ===
-document.addEventListener('DOMContentLoaded', () => { 
+document.addEventListener('DOMContentLoaded', async () => { 
     
     // CHỈ RENDER NẾU TÌM THẤY GRID CỦA TRANG CHỦ
     if (document.getElementById('new-products-grid')) {
-        renderHomepageProducts(); 
+        await renderHomepageProducts(); 
     }
     
     // Cập nhật huy hiệu (luôn chạy)

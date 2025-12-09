@@ -1,5 +1,7 @@
 /* === FILE: js/product-detail.js === */
 
+import { getProducts } from './api.js';
+
 // === 1. LOGIC GIỎ HÀNG (Copy từ script.js) ===
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -42,9 +44,9 @@ function updateCartBadge() {
 }
 
 // === 2. HÀM TÌM SẢN PHẨM (ĐÃ SỬA LỖI CHO MẢNG PHẲNG) ===
-function findProductById(productId) {
-    // Dữ liệu giờ là mảng phẳng, chỉ cần .find() trực tiếp
-    return allProducts.find(p => p.id === productId);
+async function findProductById(productId) {
+    const products = await getProducts();
+    return products.find(p => p.id === productId);
 }
 
 // === 3. HÀM RENDER TRANG CHI TIẾT ===
@@ -209,13 +211,13 @@ function addPdpListeners() {
 
 
 // === 6. KHỞI CHẠY CHÍNH ===
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     // 1. Lấy ID sản phẩm từ URL
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
 
     // 2. Tìm sản phẩm
-    const product = findProductById(productId);
+    const product = await findProductById(productId);
 
     // 3. Render
     if (product) {
