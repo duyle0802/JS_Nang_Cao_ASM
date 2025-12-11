@@ -3,7 +3,7 @@
     {
       "id": "n1",
       "name": "Cold Brew Vani",
-      "price": 4.76,
+      "price": 5,
       "icon": "🧊",
       "image": "https://imgs.search.brave.com/RGkEN_TVFG2Y-1ACyevPQvY1bQyFisxu4H6yGRhGKc4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9taWR3/ZXN0bmljZWJsb2cu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIyLzA5L3N0YXJi/dWNrcy1jb3B5Y2F0/LXZhbmlsbGEtc3dl/ZXQtY3JlYW0tY29s/ZC1icmV3LmpwZw",
       "category": "cafe",
@@ -221,6 +221,29 @@
       "category": "cafe",
       "isNew": false,
       "isBestseller": true
+    }
+  ],
+  "users": [
+    {
+      "id": "u1",
+      "email": "admin@gmail.com",
+      "password": "1",
+      "fullname": "Administrator",
+      "role": "admin"
+    },
+    {
+      "id": "u2",
+      "email": "khachhang@gmail.com",
+      "password": "123",
+      "fullname": "Nguyễn Văn Khách",
+      "role": "user"
+    },
+    {
+      "id": "47ed",
+      "fullname": "Le Duy",
+      "email": "duy123@gmail.com",
+      "password": "leduy123",
+      "role": "user"
     }
   ]
 }

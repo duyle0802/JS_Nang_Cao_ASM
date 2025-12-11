@@ -3,39 +3,49 @@
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('login-form');
     const errorMsg = document.getElementById('login-error');
+    const API_URL = 'http://localhost:3000/users';
 
-    loginForm.addEventListener('submit', (e) => {
+    loginForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
 
-        // Quick admin override: username 'admin123' and password '1'
-        if (email.trim() === 'admin123@gmail.com' && password === '1') {
-            const adminUser = { username: 'admin123', role: 'admin' };
-            localStorage.setItem('currentUser', JSON.stringify(adminUser));
-            // redirect to admin page (relative to view/)
-            window.location.href = 'admin/admin.html';
-            return;
-        }
+        try {
+            // 1. Tìm user có email và password khớp qua API
+            // GET /users?email=...&password=...
+            const response = await fetch(`${API_URL}?email=${email}&password=${password}`);
+            const usersFound = await response.json();
 
-        // 1. Lấy danh sách user từ localStorage
-        // Nếu chưa có ai đăng ký thì trả về mảng rỗng
-        const users = JSON.parse(localStorage.getItem('users')) || [];
+            if (usersFound.length > 0) {
+                // 2. Đăng nhập thành công
+                const user = usersFound[0];
+                
+                // Lưu thông tin phiên đăng nhập vào localStorage (Client-side session)
+                localStorage.setItem('currentUser', JSON.stringify(user));
 
-        // 2. Tìm user có email và password khớp
-        const userFound = users.find(u => u.email === email && u.password === password);
+                alert('Đăng nhập thành công! Xin chào ' + user.fullname);
 
-        if (userFound) {
-            // 3. Nếu tìm thấy -> Lưu thông tin phiên đăng nhập hiện tại
-            localStorage.setItem('currentUser', JSON.stringify(userFound));
-            
-            alert('Đăng nhập thành công! Xin chào ' + userFound.fullname);
-            window.location.href = '../index.html'; // Chuyển về trang chủ
-        } else {
-            // 4. Nếu không thấy -> Báo lỗi
+                // 3. Kiểm tra Role để điều hướng
+                if (user.role === 'admin') {
+                    // Nếu là admin -> Vào trang quản trị
+                    // Lưu ý đường dẫn: login.html đang ở view/, admin.html đang ở view/admin/
+                    window.location.href = 'admin/admin.html';
+                } else {
+                    // Nếu là user thường -> Về trang chủ
+                    window.location.href = '../index.html';
+                }
+
+            } else {
+                // 4. Không tìm thấy user -> Báo lỗi
+                errorMsg.style.display = 'block';
+                errorMsg.textContent = 'Email hoặc mật khẩu không đúng!';
+            }
+
+        } catch (err) {
+            console.error(err);
             errorMsg.style.display = 'block';
-            errorMsg.textContent = 'Email hoặc mật khẩu không đúng!';
+            errorMsg.textContent = 'Lỗi kết nối đến máy chủ. Vui lòng thử lại sau.';
         }
     });
 });
